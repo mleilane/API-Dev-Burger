@@ -2,7 +2,7 @@
 // res -> objeto de resposta 
 //next -> função de callback, indica ao middleware que a execução pode continuar 
 
-const logMiddleware = (req, res, next) =>{
+const logMiddleware = (req, res, next) => {
     console.log(`[${req.method}] - ${req.url}`);
     next();
 };

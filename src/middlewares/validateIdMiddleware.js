@@ -1,6 +1,6 @@
 // define a validaçao de ID 
 
-const orders = require("./models/orderModel"); //importa o modulo que contem o modelo de dados 
+const orders = require("../models/orderModel"); //importa o modulo que contem o modelo de dados 
 
 const validateIdMiddleware = (req, res, next) => {
   const { id } = req.params; // extrair o ID dos parametros de requisição 

@@ -61,7 +61,7 @@ if (orderIndex !== -1) {
 
 //funcao para atualizar o status do pedido
 const updateOrderStatus = (req,res) => {
-    const { id } = re.params;
+    const { id } = req.params;
     const orderIndex = orders.findIndex(order => order.id === id);
 
     if (orderIndex !== -1) {

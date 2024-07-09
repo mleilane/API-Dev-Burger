@@ -1,11 +1,13 @@
 
 const express = require('express'); // importando o express
 
+
 // importa funções do controlador de pedidos "orderController" - Criar - ler - atualizar e excluir pedidos 
 const {
-    createOrder,
+    
     getAllOrders,
     getOrderById,
+    createOrder,
     updateOrder,
     deleteOrder,
     updateOrderStatus
@@ -13,8 +15,11 @@ const {
 
 // verificar se o ID informado nas requisiçoes é valido antes de processar a requisição 
 const validateIdMiddleware = require('../middlewares/validateIdMiddleware'); // importa o middleware de validação de id
-const router = express.Router(); // criando o router para definir as rotas especificas para pedidos 
 
+const router = express.Router();// criando o router para definir as rotas especificas para pedidos 
+
+
+// rotas
 router.post('/',createOrder); // criar novo pedido 
 router.get('/', getAllOrders); // obter - listar todos os pedidos 
 router.get('/:id', validateIdMiddleware, getOrderById); // usa o middleware para validar o id, depois obter pedido especifico por ID 

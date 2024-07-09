@@ -11,6 +11,6 @@ const app = express(); // instancia do express
 app.use(express.json());
 app.use(logMiddleware);
 
-app.use('./order', orderRoutes);
+app.use('/order', orderRoutes);
 
 module.exports = app; // permite usar a  constante app em outros arquivos 
